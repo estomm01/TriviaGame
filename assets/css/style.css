@@ -11,12 +11,19 @@ h1 {
   color: #e6eaf0;
 }
 
-.form {
+.startGame {
+ margin-top: 30px;
+ font-size:2em;
 
 
 }
 
 #doneButton {
+text-align: center;
 
+}
 
+.form {
+
+  text-align:center;
 }

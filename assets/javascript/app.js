@@ -3,16 +3,22 @@ $(document).ready(function () {
   var game = {
     questions: [
       {
-        question: 'What is my name?',
-        possibles: ['Fred', 'Markus', 'Nick'],
+        question: 'What other name is common with Maine Coon cats?',
+        possibles: ['Gentle Giant', 'Coonier', 'Giant Coon'],
         id: 'questions-one',
-        answer: 1
+        answer: 0
 
       }, {
-        question: 'What is my last name?',
-        possibles: ['Smith', 'Maasikas', 'Tyler'],
+        question: 'how many breeds of cats are there that the CFA recognizes?',
+        possibles: [ 60, 14, 44],
         id: 'question-two',
         answer: 2
+
+      },{
+        question:"What was the cats name in Autstin Powers Movie",
+        possibles: ['Austin', 'Mr. Bigglesworth', 'Kitty' ],
+        id: 'question-three',
+        answer: 1
 
       }
 
@@ -119,7 +125,7 @@ $(document).ready(function () {
   // allows it to be displayed on the page
   //input boxes to construct and return a query string
   function buildQuestions() {
-    var questionHTML = 'text'
+    var questionHTML = ''
     for (var i = 0; i < game.questions.length; i++) {
       questionHTML = questionHTML + formTemplate(game.questions[i]);
       console.log('questionHTML');
