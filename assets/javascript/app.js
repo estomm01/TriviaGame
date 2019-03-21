@@ -20,6 +20,26 @@ $(document).ready(function () {
         id: 'question-three',
         answer: 1
 
+      },{
+        question: "What percentage do you think cat sleep during their lives?",
+        possibles: ['40%', '60%', '70%',],
+        id: 'question-three',
+        answwer: 2
+      },{
+        question: "why do cats purr?",
+        possibles: ['Contentment', 'Being Hungry', 'To Communicate'],
+        id: 'question-four',
+        answewr: 0
+      },{
+        question: " Cats can jump how many times its own height?",
+        possibles:["Twice it's own length", "Three Times", "Six Times",],
+        id: 'question-five',
+        answer: 2
+      },{
+        question: "What percentage of people consider themselves cat people",
+        possibles: ["12%","20%", "40",],
+        id: 'question-six',
+        answer: 0
       }
 
 
