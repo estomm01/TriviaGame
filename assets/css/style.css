@@ -1,29 +1,85 @@
 body {
+background-image: url("../images/maincoon.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+width: 90%;
+}
 
-  background-color:rgb(0, 162, 255);
+.wrapper {
+  font-weight: bold;
+  border: 2px solid black;
+  background-color: rgb(217, 223, 221);
+  opacity: 0.6;
+  font-family: 'sans-serif';
+  color: rgb(15, 3, 32);
+  margin: auto;
+  width:50%;
+  text-align: center;
+
 
 }
 
-h1 {
-  font-family: 'Josefin Slab', serif;
-  font-size: 5em;
+#questions-container {
+  font-size: 1.2em;
+  padding: 10px;
   text-align: center;
-  color: #e6eaf0;
+
+}
+
+
+h1 {
+  font-size: 3em;
+  color: #17181a;
+  text-align: center;
 }
 
 .startGame {
- margin-top: 30px;
- font-size:2em;
-
+ margin-top: 20px;
+ font-size:1em;
+ margin-left: 50px;
+ margin-bottom:20px;
+ background-color: rgb(14, 161, 180);
+border: none;
+color: rgb(255, 255, 255);
+padding: 5px 10px;
 
 }
 
 #doneButton {
+font-size:1em;
+background-color: rgb(14, 161, 180);
+border: none;
+color: white;
 text-align: center;
+padding: 5px 10px;
+
 
 }
 
-.form {
+#messageDiv {
+  font-size: 2em;
+  color: rgb(50, 16, 104);
+  padding-left:50px;
+}
 
-  text-align:center;
+.results {
+  font-size: 1.5em;
+  color: rgb(50,16,104);
+  padding-left: 50px;
+
+}
+
+.timer {
+  padding-left: 50px;
+}
+
+.questionOne {
+ margin: 10px;
+
+
+}
+
+.answers{
+  margin: 10px;
+  padding-left: 10px
 }

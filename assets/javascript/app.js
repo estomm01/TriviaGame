@@ -39,7 +39,7 @@ $(document).ready(function () {
         question: "What percentage of people consider themselves cat people",
         possibles: ["12%","20%", "40",],
         id: 'question-six',
-        answer: 0
+        answer: 1
       }
 
 
@@ -47,11 +47,11 @@ $(document).ready(function () {
   };
 
 
-  // var text = "";
-  // $("#doneButton").hide();
+   //var text = "";
+   //$("#doneButton").hide();
 
   //var message = "Game Over!";
-  //sometype of jquery function to show this
+  // sometype of jquery function to show this
 
 
 
@@ -66,34 +66,38 @@ $(document).ready(function () {
   // }
 
   // for (i = 0; i < game.possibles.length; i++){
-  // $("#questions-contaier").append("<li>" + game.possibles[i].possibles + "</li>");
+  // $("#questions-contaier").append("<li class='list-group-item'>" + game.possibles[i].possibles + "</li>");
 
-  //  // text += "<li>" + game.questions[i] +"</li>";
-  // }
+  // //  // text += "<li>" + game.questions[i] +"</li>";
+  // // // }
 
-  // //  <div class="card" style="width: 18rem;">
-  // //   <img src="..." class="card-img-top" alt="...">
-  // //  <div class="card-body">
-  // //  <h5 class="card-title">Totally Trivial Trivia</h5>
-  // //  <p class="card-text">questions or title.</p>
-  // //   </div>
-  // //  <ul class="list-group list-group-flush">
-  // //  <li class="list-group-item"> </li>
-  // //  <li class="list-group-item"> </li>
-  // //  <li class="list-group-item"> </li>
-  // //  </ul>
-  // //  </div>
-  // //  </div>
+  //  <div class="card" style="width: 18rem;">
+  //   <img src="..." class="card-img-top" alt="...">
+  //  <div class="card-body">
+  //  <h5 class="card-title">Totally Trivial Trivia</h5>
+  //  <p class="card-text">questions or title.</p>
+  //   </div>
+  //  <ul class="list-group list-group-flush">
+  //  <li class="list-group-item"> </li>
+  //  <li class="list-group-item"> </li>
+  //  <li class="list-group-item"> </li>
+  //  </ul>
+  //  </div>
+  //  </div>
   // // };
-  //wrapper or questions-container
+  // wrapper or questions-container
   // $("#questions-container").append(question);
   // $('#questions-container').show();
-  //console.log('he');
-  $(".startGame").on("click", function () {
+  // console.log('he');
+   $(".startGame").on("click", function () {
     $('.wrapper').show();
-    console.log('click');
+    run();
+    buildQuestions();
+    $('.end-container').show();
+    //   console.log('click');
     $(this).hide();
-
+    $()
+  // console.log
   });
 
   var number = 40;
@@ -122,19 +126,19 @@ $(document).ready(function () {
     clearInterval(counter);
   }
 
-  run();
+ // run();
 
   function formTemplate(data) {
 
     // questions can be inputed into that form field
-    var qString = "<form id='questionOne'>" + data.question + "<br>";
+    var qString = "<form class='questionOne'>" + data.question + "<br>";
 
     var possibles = data.possibles;
     // a for loop to go through the possibles array
     for (var i = 0; i < possibles.length; i++) {
       var possible = possibles[i];
       console.log(possible);
-      qString = qString + "<input type='radio' name='" + data.id + "' value=" + i + ">" + possible;
+      qString = qString + "<input class='answers' type='radio' name='" + data.id + "' value=" + i + ">" + possible;
 
     }
     return qString + "</form>";
@@ -143,7 +147,7 @@ $(document).ready(function () {
 
   // this function takes the template created in the last function and by appending it,
   // allows it to be displayed on the page
-  //input boxes to construct and return a query string
+  //input boxes to construct and return a qstring
   function buildQuestions() {
     var questionHTML = ''
     for (var i = 0; i < game.questions.length; i++) {
@@ -163,7 +167,7 @@ $(document).ready(function () {
   }
 
   // call the buildQuestions function
-  buildQuestions();
+
 
   // function to build the display of guesser results
   function resultsTemplate(question) {
@@ -224,6 +228,5 @@ $(document).ready(function () {
     stop();
     $("#messageDiv").html("Game Over!");
   })
-
 
 });
